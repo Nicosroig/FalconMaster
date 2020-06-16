@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Atributos DOM</title>
+	</head>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			background: #dddddd;
+			display: inline-block;
+			margin-right: 10px;
+			border: 1px solid #aaaaaa;
+		}
+
+		.azul {
+			background: #0074d9;
+			border: 1px solid #000;
+		}
+
+		.rojo {
+			background: #ff4136;
+			border: 1px solid #000;
+		}
+	</style>
+	<body>
+		<section id="contenedor">
+			<div class=""></div>
+			<div class=""></div>
+		</section>
+
+		<script>
+			var elemento = document.createElement("div");
+			var padre = document.getElementById("contenedor");
+			var referencia = document.getElementsByTagName("div")[0];
+			elemento.setAttribute("class", "azul");
+			padre.insertBefore(elemento, referencia);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document Object Model 2</title>
+	</head>
+	<body>
+		<ol id="lista">
+			<li>Lorem ipsum dolor sit amet.</li>
+			<li>Consectetur adipisicing elit.</li>
+		</ol>
+		<script>
+			var elemento = document.createElement("li");
+			var contenido = document.createTextNode("Nuevo texto");
+			elemento.appendChild(contenido);
+
+			var padre = document.getElementsByTagName("li")[0].parentNode; // me remite al la lista por el tag y me refiere al elemnto padre por el parenNode
+			//var padre = document.getElementById("lista"); //me remite al elemento padre por su id
+			padre.appendChild(elemento); //Agrega el elemento al final de la lista
+			var primerElemento = document.getElementsByTagName("li")[0]; //Agrega el elemento antes del indicado En este caso posicion 0
+			padre.insertBefore(elemento, primerElemento);
+		</script>
+	</body>
+</html>

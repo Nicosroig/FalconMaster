@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document Object Model</title>
+	</head>
+	<body>
+        <h1 id="titulo">Titulo de nuestro sitio web</h1>
+        <div id="subtitulo"></div>
+		<p>
+            1.- Lorem ipsum <b>dolor</b> sit amet consectetur adipisicing elit. Numquam alias
+			aspernatur dolorem corporis sequi amet repellat! Neque beatae et optio iusto,
+			quisquam quia non praesentium impedit? Ducimus cum labore laborum!
+		</p>
+		<p id="segundo">
+			2.- Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias
+			aspernatur dolorem corporis sequi amet repellat! Neque beatae et optio iusto,
+			quisquam quia non praesentium impedit? Ducimus cum labore laborum!
+		</p>
+		<p>
+			3.- Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias
+			aspernatur dolorem corporis sequi amet repellat! Neque beatae et optio iusto,
+			quisquam quia non praesentium impedit? Ducimus cum labore laborum!
+        </p>
+        <script>
+            var elementosP = document.getElementsByTagName("p");
+            var segundoParrafo = document.getElementById("segundo");
+   
+   //----CREAR UN NODO ----//
+            //1.- Crear un elemento
+            var elemento= document.createElement("h2");
+            //2.- Crear el nodo de texto
+            var contenido = document.createTextNode("Este es nuestro titular");
+            //3.- Añadir el nodo de texto al elemento
+            elemento.appendChild(contenido);
+            //4.- Agregar atributos al elemento
+            elemento.setAttribute("align", "center");
+            //5.- Agregar el elemento al documento
+            document.getElementById("subtitulo").appendChild(elemento);
+   
+   
+   
+   </script>
+</html>

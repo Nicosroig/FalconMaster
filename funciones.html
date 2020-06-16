@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Funciones</title>
+	</head>
+	<body>
+		<script>
+			function saludo(nombre) {
+				document.write("Hola, " + nombre);
+			}
+
+			saludo("Carlos");
+			document.write("<br>");
+
+			var suma = function (numero1, numero2) {
+				var numero1 = numero1;
+				var numero2 = numero2;
+
+				return numero1 + numero2;
+			};
+			document.write(suma(30, 20));
+			document.write("<br>");
+			document.write(suma(50, 20));
+
+			var numeroMaximo = function (valor1, valor2) {
+				if (valor1 > valor2) {
+					return valor1;
+				} else {
+					return valor2;
+				}
+			};
+
+			numeroMaximo(10, 20);
+			//se puede hacer un document.write o asi como esta
+			//buscarlo por consola
+		</script>
+	</body>
+</html>

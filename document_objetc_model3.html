@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document Object Model 3</title>
+	</head>
+	<body>
+		<ol id="lista">
+			<li id="primero">Lorem ipsum <b>dolor</b> sit amet.</li>
+			<li>Consectetur adipisicing elit.</li>
+		</ol>
+		<script>
+			// var primerElemento = document.getElementById("primero");
+			// primerElemento.textContent = "Nuevo texto";
+			// primerElemento.innerHTML = "Nuevo texto"; //otra forma
+
+			var elemento = document.createElement("li");
+			var contenido = document.createTextNode("Nuevo texto");
+
+			elemento.appendChild(contenido);
+
+			var padre = document.getElementsByTagName("li")[0].parentNode;
+			var referencia = document.getElementsByTagName("li")[0];
+			padre.replaceChild(elemento, referencia); //reemplaza el elemento puesto en la referencia
+			var referencia2 = document.getElementsByTagName("li")[1];
+			padre.removeChild(elemento, referencia2); //remueve el elemento puesto en la var referenci
+		</script>
+	</body>
+</html>

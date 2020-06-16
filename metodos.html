@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Metodos para cadenas de texto</title>
+	</head>
+	<body>
+		<script>
+			var texto = "Carlos Arturo";
+			var nuevoTexto = texto.length; //muestra cantidad de caracteres
+			var nuevoTexto = texto.substring(3); //corta la cantidad especificada de caracteres
+			var nuevoTexto = texto.substring(0, 3); //corta a partir del caracter especificado
+			var nuevoTexto = texto.indexOf("a"); //nos muestra la posicion en donde se encuentra el caracter
+			var nuevoTexto = texto.lastIndexOf("a"); //nos muestra la posicion en donde se encuentra el caracter contando de atras para adelante
+			var nuevoTexto = texto.replace(texto, "Pedro"); //reemplaza un texto por otro, en este caso, el texto guardado en la var texto
+			var nuevoTexto = texto.toLocaleUpperCase(); //pasa todo a mayusculas
+			var nuevoTexto = texto.toLocaleLowerCase(); //pasa todo a minusculas
+
+			document.write(nuevoTexto);
+		</script>
+	</body>
+</html>

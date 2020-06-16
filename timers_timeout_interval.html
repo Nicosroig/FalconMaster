@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Timers, timeout, interval</title>
+	</head>
+	<body></body>
+	<script>
+		(function () {
+			var contador = 1;
+			//Timeout
+			var saludo = function () {
+				console.log(contador);
+				contador++;
+				if (contador === 5) {
+					clearInterval(intervalo);
+				}
+			};
+
+			//setTimeout(saludo, 300);
+
+			//Interval
+
+			var intervalo = setInterval(saludo, 3000);
+		})();
+	</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Modificando estilos de los elementos 2</title>
+		<style>
+			.thumb {
+				width: 200px;
+				transition: 300ms all ease;
+			}
+
+			.grande {
+				width: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="">
+			<input type="button" value="Cambio de tamaño" onclick="zoom();" />
+		</form>
+		<img
+			id="thumb"
+			class="thumb"
+			src="http://lorempixel.com/400/400/"
+			width="400"
+			alt=""
+		/>
+		<script>
+			var zoom = function () {
+				var thumb = document.getElementById("thumb");
+
+				if (thumb.className == "thumb") {
+					thumb.className = "thumb grande";
+				} else {
+					thumb.className = "thumb";
+				}
+			};
+		</script>
+	</body>
+</html>

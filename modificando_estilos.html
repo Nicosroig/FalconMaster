@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Modificando estilos de los elementos</title>
+		<style>
+			.thumb {
+				width: 200px;
+				transition: 300ms all ease;
+			}
+
+			.grande {
+				width: 400px;
+			}
+
+			.titulo {
+				border: 1px solid navy;
+				background: #ccc;
+				padding: 10px;
+			}
+
+			.tituloGrande {
+				font-size: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="encabezado" class="titulo tituloGrande">Soy un encabezado</h1>
+		<script>
+			var encabezado = document.getElementById("encabezado");
+			//encabezado.style.color = "navy";
+			encabezado.className = encabezado.className.replace("tituloGrande", ""); //reemplaza una clase por una clase vacia
+		</script>
+	</body>
+</html>
